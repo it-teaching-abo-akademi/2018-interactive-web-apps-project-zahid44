@@ -46,6 +46,7 @@ export default class StockTableRow extends Component {
         portfolio_total_value = portfolio_total_value + parseFloat(stocks[i].stock_value);
       }
     }
+    // Rendering stockRow component that is made above.
     return(
       <div>
       <Table striped bordered hover style={{marginTop:'10px'}}>
@@ -60,7 +61,6 @@ export default class StockTableRow extends Component {
           </tr>
         </thead>
         <tbody>
-          // Rendering stockRow component that is made above.
           {stockRow}
         </tbody>
       </Table>
