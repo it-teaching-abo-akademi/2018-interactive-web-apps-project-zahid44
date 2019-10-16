@@ -10,12 +10,16 @@ import NewStock from './components/new_stock';
 import ViewGraph from './components/view_graph';
 
 // This is entry point of program. This file controls routing of program.
+// The url '/' is equivalent to App component.
+// The url '/' is equivalent to NewPortfolio component. This component is one for adding new portfolio.
+// The url '/' is equivalent to App component. This component is one for adding new stock. 
+// The url '/' is equivalent to App component. This component is one for viewing graphs. 
 const routing = (
 		<Router>
-			<Route exact path='/' component={App}/>	// The url '/' is equivalent to App component.
-      <Route path='/portfolio/add' component={NewPortfolio}/> // The url '/' is equivalent to NewPortfolio component. This component is one for adding new portfolio.
-      <Route path='/stock/add/:index' component={NewStock}/> // The url '/' is equivalent to App component. This component is one for adding new stock.
-			<Route path='/stock/viewgraph/:index' component={ViewGraph}/> // The url '/' is equivalent to App component. This component is one for viewing graphs.
+			<Route exact path='/' component={App}/>	
+      <Route path='/portfolio/add' component={NewPortfolio}/> 
+      <Route path='/stock/add/:index' component={NewStock}/>
+			<Route path='/stock/viewgraph/:index' component={ViewGraph}/> 
 		</Router>
 	);
 ReactDOM.render(routing, document.getElementById('root'));
