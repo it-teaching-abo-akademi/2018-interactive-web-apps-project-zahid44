@@ -25,12 +25,11 @@ class SPMS extends Component {
     if (portfolios == null) {
       portfolios = [];
     }
+    	// This button is one for adding new portfolio. And this is component for showing details of portfolio.
     return (
       <div className="container-div">
-        // This button is one for adding new portfolio.
         <Button variant="primary" component={Link} href='/portfolio/add' disabled={portfolios.length === 10? true:false}>Add new portfolio</Button>
         <Badge variant="warning" hidden={portfolios.length !==10 ? true:false}>The maximum number of portfolios that can be crated is 10!</Badge>
-        // This is component for showing details of portfolio.
         <PortfolioCard/>
       </div>
     )
