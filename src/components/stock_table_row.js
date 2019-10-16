@@ -35,9 +35,9 @@ export default class StockTableRow extends Component {
         <tr key={index}>
           <td>{index + 1}</td>
           <td>{stock.stock_symbol}</td>
-          <td>{selected_currency === 'dollar' ? stock.stock_value + '$' : (stock.stock_value*exch_rate).toFixed(4) + '€'}</td>
+          <td>{selected_currency === 'dollar' ? '$' + stock.stock_value : (stock.stock_value*exch_rate).toFixed(4) + '€'}</td>
           <td>{stock.share_numbers}</td>
-          <td>{selected_currency === 'dollar' ? stock.stock_value*stock.share_numbers + '$' : (stock.stock_value*exch_rate*stock.share_numbers).toFixed(4) + '€'}</td>
+          <td>{selected_currency === 'dollar' ? '$' + stock.stock_value*stock.share_numbers : (stock.stock_value*exch_rate*stock.share_numbers).toFixed(4) + '€'}</td>
           <td><Button variant="outline-dark" size="sm" onClick={(e) => {if(window.confirm('Delete this stock?')){this.handleRowDeleteChange(pf_index, index, e)};}}>x</Button></td>
         </tr>
       );
