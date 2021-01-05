@@ -4,7 +4,7 @@
   "homepage": "https://it-teaching-abo-akademi.github.io/2018-interactive-web-apps-project-zahid44/",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "react": "^16.10.2",
